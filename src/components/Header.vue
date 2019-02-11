@@ -2,14 +2,8 @@
   <header>
     <h1>Blog Name</h1>
     <nav>
-      <ul>
-        <li>
-          <a href>Home</a>
-        </li>
-        <li>
-          <a href>About</a>
-        </li>
-      </ul>
+      <router-link to="/">Home</router-link>
+      <router-link to="/about">About</router-link>
     </nav>
   </header>
 </template>
@@ -25,24 +19,22 @@ header {
   background-color: #575757;
   color: #bbbbbb;
   align-content: center;
+  padding: 10px 10px;
 }
 h1 {
   display: inline;
-  padding: 0px 20px;
 }
 nav {
   display: flex;
   align-content: center;
 }
-ul {
-  display: inline-flex;
-}
-li {
-  display: inline;
-  padding: 20px 10px;
-}
-nav ul li a {
+nav a {
   color: #bbbbbb;
+  padding: 35px 40px;
+  margin-left: 10px;
   text-decoration: none;
+}
+.router-link-exact-active {
+  background-color: #404040;
 }
 </style>
